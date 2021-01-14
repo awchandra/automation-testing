@@ -14,3 +14,5 @@ ${origin}                                   LAX
 
 ##### Destination City ######
 ${destination}                              MXP
+
+${ENV}

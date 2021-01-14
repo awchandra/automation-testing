@@ -8,7 +8,7 @@ Suite Setup             Run Keywords
 Test Teardown           Close Browser Applications
 
 *** Test Case ***
-User Able to Book One Way Flight
+User Should Not Able to Book One Way Flight When No Passenger
     [Documentation]             This test for booking a one way flight ticket.
     [Tags]                      waresix test
     Given Login With Existing Users
@@ -18,11 +18,18 @@ User Able to Book One Way Flight
     homePage.Input Origin Field             ${origin}
     homePage.Input Destination Field        ${destination}
     homePage.Input Departure Date Field     ${departureDate}
+    homePage.Substract Passenger Button
     homePage.Click Search Button
-    flightSearchResultPage.Click Book Now
-    flightBookingPage.Input Passenger Name          ${fullname}
-    flightBookingPage.Input Passenger Age           ${custom_age}
-    flightBookingPage.Input Passenger Passport      ${custom_passport}
-    flightBookingPage.Click Confirm Booking
-    paymentPage.Click Payment On Arrival
-    bookingDetailsPage.Verify Booking Status
+    Should have an error message
+
+User Should Not Able to Book One Way Flight When No Departure Date
+    [Documentation]             This test for booking a one way flight ticket.
+    [Tags]                      waresix test
+    Given Login With Existing Users
+    accountProfilePage.Click Home Link Menu
+    homePage.Click Flight Menu
+    homePage.Click Business Class Option
+    homePage.Input Origin Field             ${origin}
+    homePage.Input Destination Field        ${destination}
+    homePage.Click Search Button
+    Should have an error message

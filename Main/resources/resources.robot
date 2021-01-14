@@ -16,7 +16,6 @@ Open Browser Applications
     ...                             Start Virtual Display           1920    1080
     Open Browser                    ${url}          Chrome          desired_capabilities=${caps}
     Set Window Size                 1920    1080
-    ...                      Set Selenium Speed              0.9
 
 Close Browser Applications
     Run Keyword And Ignore Error            Update Sauce Test Status

@@ -1,5 +1,5 @@
 *** Setting ***
-Resource                ../../resources/importer.robot
+Resource                ../resources/importer.robot
 
 *** Keyword ***
 
@@ -37,18 +37,24 @@ Click Business Class Option
 
 Input Origin Field
     [Arguments]                             ${origin}
+    Set Selenium Speed      0.5
     Input Text                              ${ORIGIN_INPUT}         ${origin}
-    Click Element                           ${ORIGIN_INPUT}
+    Click Element                           ${ORIGIN_VALUE}
 
 Input Destination Field
     [Arguments]                             ${destination}
+    Set Selenium Speed      0.5
     Input Text                              ${DESTINATION_INPUT}         ${destination}
-    Click Element                           ${DESTINATION_INPUT}
+    Click Element                           ${DESTINATION_VALUE}
 
 Input Departure Date Field
     [Arguments]                             ${departureDate}
     Click Element                           ${DEPARTURE_DATE}
     Execute Javascript                      ${DEPARTURE_DATE}.value         ${departureDate}
+
+Substract Passenger Button
+    Wait Until Element Is Visible           ${ADULTS_PASSENGER_SUBSTRACT}
+    Click Element                           ${ADULTS_PASSENGER_SUBSTRACT}
 
 Click Search Button
     Wait Until Element Is Visible           ${BUTTON_SEARCH_FLIGHT}
