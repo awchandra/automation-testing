@@ -20,6 +20,7 @@ Resource                    ../modules/loginModule.robot
 
 #### Utils ####
 Resource                    ../utils/generateFakeAccount.robot
+Resource                    ../utils/generalKeywords.robot
 
 
 ### Selectors ###

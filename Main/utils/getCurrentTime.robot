@@ -5,6 +5,6 @@ Resource         ../resources/importer.robot
 Get Next Day
     ${next_day}=                 Get Current Date            local
     ...                          + 24 hours
-    ...                          result_format=timestamp
+    ...                          result_format=%d
     ...                          exclude_millis=True
     Set Global Variable          ${next_day}

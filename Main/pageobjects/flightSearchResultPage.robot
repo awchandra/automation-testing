@@ -2,5 +2,6 @@
 
 
 Click Book Now
-    Scroll Element Into View                ${BOOK_NOW_BUTTON}
+    Set Selenium Speed      0.5
+    Scroll To Element                       ${BOOK_NOW_BUTTON}
     Click Element                           ${BOOK_NOW_BUTTON}

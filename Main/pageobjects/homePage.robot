@@ -39,12 +39,14 @@ Input Origin Field
     [Arguments]                             ${origin}
     Set Selenium Speed      0.5
     Input Text                              ${ORIGIN_INPUT}         ${origin}
+    Wait Until Element Is Visible           ${ORIGIN_VALUE}
     Click Element                           ${ORIGIN_VALUE}
 
 Input Destination Field
     [Arguments]                             ${destination}
     Set Selenium Speed      0.5
     Input Text                              ${DESTINATION_INPUT}         ${destination}
+    Wait Until Element Is Visible           ${DESTINATION_VALUE}
     Click Element                           ${DESTINATION_VALUE}
 
 Input Departure Date Field

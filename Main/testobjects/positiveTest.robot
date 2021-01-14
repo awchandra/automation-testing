@@ -17,7 +17,6 @@ User Able to Book One Way Flight
     homePage.Click Business Class Option
     homePage.Input Origin Field             ${origin}
     homePage.Input Destination Field        ${destination}
-    homePage.Input Departure Date Field     ${departureDate}
     homePage.Click Search Button
     flightSearchResultPage.Click Book Now
     flightBookingPage.Input Passenger Name          ${fullname}
